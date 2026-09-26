@@ -1,0 +1,16 @@
+# Ignorar la base de datos generada (se crea con npm run init-db)
+# NOTA: el .env SÍ se incluye en el repo porque es un proyecto escolar de prueba
+database.db
+database.db-shm
+database.db-wal
+
+# Ignorar carpeta de dependencias
+node_modules/
+
+# Ignorar logs generados en tiempo de ejecución
+logs/
+*.log
+
+# Ignorar certificados SSL (son locales)
+certs/*.pem
+certs/*.key

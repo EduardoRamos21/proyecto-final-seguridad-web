@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 
+      viewport: hace que la página se vea bien en celulares
+      width=device-width: usa el ancho real del dispositivo
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!--
+      SEGURIDAD: Meta CSP como capa adicional al Helmet del backend.
+      Le decimos al navegador que solo ejecute scripts de nuestro propio origen.
+      Esto es una segunda línea de defensa contra XSS.
+    -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';" />
+    
+    <!--
+      X-Content-Type-Options: le decimos al navegador que no "adivine" el tipo de archivo
+    -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    
+    <!-- Icono de la aplicación -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <title>Sistema de Expedientes Médicos - Seguro</title>
+  </head>
+  <body>
+    <!-- 
+      React monta toda la aplicación dentro de este div
+      Si el navegador tiene JavaScript deshabilitado, no verá nada
+      (aceptable ya que es una aplicación web moderna)
+    -->
+    <div id="root"></div>
+    
+    <!-- type="module" indica que es código ES Modules moderno -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
